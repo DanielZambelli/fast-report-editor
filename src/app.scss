@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{ box-sizing: border-box }
+
+.toolbar{
+  background: #fff;
+  user-select: none;
+
+  .btn{
+    display: inline-block;
+    padding: 15px;
+    background: #afafaf;
+    cursor: pointer;
+  }
+}
+
+
+.page{
+  width: 595pt;
+  height: 842pt;
+  position: relative;
+  padding: 55px;
+  padding: 55px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.page-header{
+  text-align: right;
+  opacity: .4;
+  font-size: x-small;
+  margin-bottom: 25px;
+}
+
+.document{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: #F3F5F7;
+  height: 100%;
+}
+
+.document *[contenteditable="true"]{
+  padding: 5px;
+  border: 1px solid #a8c3cf;
+}
+
+table{
+  width: 100%;
+  td{ vertical-align: top; }
+  &.two-cols tr td{ width: 50%; }
+}
+
+.placeholder{
+  text-transform: uppercase;
+  background: lightblue;
+  font-size: small;
+  padding: 1px;
+}
+
+// line for debugging positions
+.line{
+  left: 0px;
+  height: 1px;
+  width: 595pt;
+  background: red;
+  position: absolute;
+}
+
+// print mode
+.print-mode{
+
+  .toolbar{ display: none; }
+
+  .document{
+    background-color: #000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .page{
+    width: 595pt;
+    height: 842pt;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  *[contenteditable="true"]{
+    border-color: transparent;
+  }
+}
